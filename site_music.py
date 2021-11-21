@@ -13,7 +13,7 @@ guitarras.append(SG)
 
 
 def guitarra_selecion(guitarras):
-  escolha = input('qual nome da guitarra que vc escolheu?')
+  escolha = input('qual nome da guitarra que vc escolheu? ')
   for guitarra in guitarras:
     if escolha == guitarra.get("nome"):
       print(f'ok, vc escolheu {guitarra.get("nome")}  que custa {guitarra.get("preço")}')
@@ -27,11 +27,15 @@ procurar = input('como vc vai querer procurar pela sua guitarra? pelo preço, co
 if procurar == 'preço':
   for guitarra in guitarras:
     print(f' essa guitarra {guitarra.get("nome")} custa {guitarra.get("preço")} ')
+  guitarra_selecion(guitarras)
+
 if procurar == 'nome':
   print('temos essas guitarras:')
   for guitarra in guitarras:
     print(f'- {guitarra.get("nome")}')
+  guitarra_selecion(guitarras)
 
 if procurar == 'cor':
   for guitarra in guitarras:
     print(f'essa guitarra {guitarra.get("nome")} tem cor {guitarra.get("cor")}')
+  guitarra_selecion(guitarras)
